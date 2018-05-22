@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +44,7 @@ public class CardVisit extends AppCompatActivity  implements NfcAdapter.CreateNd
     CarteDespi card;
     public TextView email;
     CardAdapter cardAdapter;
+    Button btAdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +61,8 @@ public class CardVisit extends AppCompatActivity  implements NfcAdapter.CreateNd
 
         rvCards = (RecyclerView) findViewById(R.id.rvCard);
         cards =new ArrayList<CarteDespi>();
+        cards= SQLite.select().
+                from(CarteDespi.class).queryList();
         cardAdapter = new CardAdapter(this,cards);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -76,7 +81,19 @@ public class CardVisit extends AppCompatActivity  implements NfcAdapter.CreateNd
         // Register callback to listen for message-sent success
         nfcAdapter.setOnNdefPushCompleteCallback(this, this);
 
+        btAdd=(Button)findViewById(R.id.btAdd);
+     //
+        //   btAdd.setOnClickListener();
+        btAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                    Intent intent = new Intent(CardVisit.this,MainActivity.class);
+                    startActivity(intent);
+
+
+            }
+        });
 
 
     }

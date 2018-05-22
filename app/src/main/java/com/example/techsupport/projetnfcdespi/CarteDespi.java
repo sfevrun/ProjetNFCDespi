@@ -85,8 +85,8 @@ public class CarteDespi extends BaseModel implements Serializable {
         this.cellphone = cellphone;
     }
 
-    public CarteDespi( String firstname, String lastName, String fonction, String courriel, String cellphone, Integer type) {
-       // this.id=id;
+    public CarteDespi(String firstname, String lastName, String fonction, String courriel, String cellphone, Integer type) {
+      //  this.id=id;
               this.firstname = firstname;
         this.LastName = lastName;
         this.fonction = fonction;

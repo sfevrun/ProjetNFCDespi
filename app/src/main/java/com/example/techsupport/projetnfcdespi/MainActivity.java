@@ -1,5 +1,6 @@
 package com.example.techsupport.projetnfcdespi;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         c.save();
 
-
+        Intent intent = new Intent(MainActivity.this,CardVisit.class);
+        startActivity(intent);
 
     }
 }
