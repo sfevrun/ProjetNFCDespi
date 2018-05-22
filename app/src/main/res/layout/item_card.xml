@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtprenoml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Despinasse" />
+
+                <TextView
+                    android:id="@+id/txtnoml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Jn Kilson"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="34562284"
+                />
+
+            <TextView
+                android:id="@+id/emaill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="despinass@gmail.com"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            >
+            <TextView
+                android:id="@+id/txtTypel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Send"
+                android:paddingRight="5dp"
+                android:gravity="bottom"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
